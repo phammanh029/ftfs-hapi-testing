@@ -2,6 +2,8 @@ import { Server } from 'hapi';
 
 const server = new Server();
 
+import HelloPlugin from './plugins/hello';
+
 const env = process.env.NODE_ENV || 'development';
 const port = process.env.PORT || 4000;
 
@@ -54,7 +56,8 @@ server.register([
         description: 'An example api'
       }
     }
-  }
+  },
+  HelloPlugin
 ], err => {
   if (err) throw err;
 
@@ -66,6 +69,5 @@ server.register([
   }
 
 });
-
 
 export default server;
