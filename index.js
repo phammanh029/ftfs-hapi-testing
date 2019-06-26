@@ -1,4 +1,4 @@
-require('babel-polyfill');
+aarequire('babel-polyfill');
 require('babel-register');
 module.exports = require('./src');
 
