@@ -21,6 +21,6 @@ Test('returns a valid payload', async t => {
   const server = t.context;
 
   const res = await server.inject('/bob');
-  t.is(res.statusCode, 202);
+  t.is(res.statusCode, 200);
   t.deepEqual(res.result, { name: 'bob' });
 });
